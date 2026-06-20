@@ -1,5 +1,4 @@
 import React from "react";
-import myImage from "../img/myImage.png";
 
 class About extends React.Component {
   constructor() {
@@ -104,23 +103,6 @@ class About extends React.Component {
               <div className="box-shadow-full">
                 <div className="row">
                   <div className="col-md-6">
-                    <div className="row">
-                      <div
-                        className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}
-                      >
-                        <div
-                          className="about-img"
-                          style={{ textAlign: "center" }}
-                        >
-                          <img
-                            className="img-fluid rounded b-shadow-a"
-                            src={myImage}
-                            alt="Profile"
-                          />
-                        </div>
-                      </div>
-                    </div>
                     <div className="skill-mf">
                       {/* <p className="title-s">Skill</p> */}
                       {this.state.skills.map(skill => {
