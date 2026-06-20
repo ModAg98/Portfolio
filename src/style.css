@@ -285,29 +285,44 @@ a:hover {
 .socials .ico-circle {
   height: 40px;
   width: 40px;
-  font-size: 1.7rem;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.4;
   margin: 0 15px 0 0;
+  color: #2d2d2d;
+  background-color: #fff;
   box-shadow: 0 0 0 3px #0078ff;
-  transition: all 500ms ease;
+  transition: all 400ms ease;
 }
 
-.socials .ico-circle i {
-  font-family: "Ionicons";
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1;
+.socials .ico-circle svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: fill 400ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
   color: #fff;
+  transform: translateY(-3px);
   box-shadow: 0 0 0 3px #cde1f8;
-  transition: all 500ms ease;
+  transition: all 400ms ease;
+}
+
+.socials .social-linkedin:hover {
+  background-color: #0a66c2;
+  box-shadow: 0 0 0 3px #cfe3f7;
+}
+
+.socials .social-gmail:hover {
+  background-color: #ea4335;
+  box-shadow: 0 0 0 3px #f8d2ce;
+}
+
+.socials .social-github:hover {
+  background-color: #181717;
+  box-shadow: 0 0 0 3px #d4d4d4;
 }
 
 /* Ul resect */
