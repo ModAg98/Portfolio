@@ -165,7 +165,7 @@ class Contact extends React.Component {
                               aria-label="LinkedIn"
                             >
                               <span className="ico-circle">
-                                <i className="ion ion-social-linkedin"></i>
+                                <i className="ion-social-linkedin"></i>
                               </span>
                             </a>
                           </li>
@@ -175,7 +175,7 @@ class Contact extends React.Component {
                               aria-label="Gmail"
                             >
                               <span className="ico-circle">
-                                <i className="ion ion-social-google"></i>
+                                <i className="ion-social-google"></i>
                               </span>
                             </a>
                           </li>
@@ -185,7 +185,7 @@ class Contact extends React.Component {
                               aria-label="Outlook"
                             >
                               <span className="ico-circle">
-                                <i className="ion ion-social-windows"></i>
+                                <i className="ion-social-windows"></i>
                               </span>
                             </a>
                           </li>

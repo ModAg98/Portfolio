@@ -20,19 +20,19 @@ const projectsEn = [
   {
     id: "spa-migration",
     image: stock1,
-    title: "Core Platform SPA Migration",
+    title: "Lean Execution Intelligence Suite",
     summary:
-      "Led migration from MVP architecture to Vue.js + Spring Boot SPA with stronger maintainability.",
-    stack: "Vue.js, Spring Boot, SPA",
+      "Built a decision-support module that centralizes shopfloor insights, action tracking, and KPI visibility for faster operational decisions.",
+    stack: "Vue.js, Spring Boot, PostgreSQL, KPI Dashboards",
     lightbox: "portfolio"
   },
   {
     id: "postgres-migration",
     image: stock2,
-    title: "Data Layer Modernization",
+    title: "Platform Reliability & Governance Program",
     summary:
-      "Spearheaded Redis to PostgreSQL migration to improve reliability, persistence, and scale.",
-    stack: "PostgreSQL, Redis, Data Migration",
+      "Designed a resilient persistence and governance foundation with schema evolution, migration tooling, and production-grade data consistency safeguards.",
+    stack: "PostgreSQL, Redis Migration, Data Governance",
     lightbox: "portfolio"
   },
   {
@@ -77,19 +77,19 @@ const projectsFr = [
   {
     id: "spa-migration",
     image: stock1,
-    title: "Migration SPA de la plateforme",
+    title: "Suite d'intelligence d'execution Lean",
     summary:
-      "Migration d'une architecture MVP vers une SPA Vue.js + Spring Boot pour une meilleure maintenabilite.",
-    stack: "Vue.js, Spring Boot, SPA",
+      "Conception d'un module d'aide a la decision centralisant les insights terrain, le suivi d'actions et la visibilite KPI pour accelerer les decisions operationnelles.",
+    stack: "Vue.js, Spring Boot, PostgreSQL, KPI Dashboards",
     lightbox: "portfolio"
   },
   {
     id: "postgres-migration",
     image: stock2,
-    title: "Modernisation de la couche donnees",
+    title: "Programme fiabilite & gouvernance plateforme",
     summary:
-      "Pilotage de la migration Redis vers PostgreSQL pour renforcer la fiabilite, la persistance et la scalabilite.",
-    stack: "PostgreSQL, Redis, Migration de donnees",
+      "Mise en place d'une base de persistance robuste avec evolution de schema, outillage de migration et controles de coherence de donnees en production.",
+    stack: "PostgreSQL, Migration Redis, Gouvernance de donnees",
     lightbox: "portfolio"
   },
   {
@@ -143,9 +143,9 @@ class Portfolio extends React.Component {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row portfolio-grid">
             {projects.map(project => (
-              <div className="col-md-4" key={project.id}>
+              <div className="col-md-4 d-flex" key={project.id}>
                 <div className="work-box">
                   <a
                     href={project.image}
@@ -160,18 +160,11 @@ class Portfolio extends React.Component {
                       />
                     </div>
                     <div className="work-content">
-                      <div className="row">
-                        <div className="col-sm-8">
-                          <h2 className="w-title">{project.title}</h2>
-                          <p className="w-more mb-2">{project.summary}</p>
-                          <div className="w-more">
-                            <span className="w-ctegory">{project.stack}</span>
-                          </div>
-                        </div>
-                        <div className="col-sm-4">
-                          <div className="w-like">
-                            <span className="ion-ios-plus-outline"></span>
-                          </div>
+                      <div className="work-content-inner">
+                        <h2 className="w-title">{project.title}</h2>
+                        <p className="w-more mb-2">{project.summary}</p>
+                        <div className="w-more">
+                          <span className="w-ctegory">{project.stack}</span>
                         </div>
                       </div>
                     </div>

@@ -802,6 +802,18 @@ PORTFOLIO
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  width: 100%;
+}
+
+.portfolio-grid .col-md-4 {
+  margin-bottom: 1.5rem;
+}
+
+.work-box > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
 }
 
 .work-box:hover img {
@@ -812,19 +824,40 @@ PORTFOLIO
 .work-img {
   display: block;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
 }
 
 .work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: all 1s;
 }
 
 .work-content {
   padding: 2rem 3% 1rem 4%;
+  flex: 1;
+  display: flex;
+}
+
+.work-content-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.6rem;
 }
 
 .work-content .w-more {
   color: #4e4e4e;
   font-size: .8rem;
+}
+
+.work-content .w-more.mb-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4.9em;
 }
 
 .work-content .w-more .w-ctegory {
@@ -847,6 +880,11 @@ PORTFOLIO
 
 .w-title {
   font-size: 1.2rem;
+  min-height: 2.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /*
