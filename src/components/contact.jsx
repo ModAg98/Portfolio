@@ -2,6 +2,25 @@ import React from "react";
 import imageOverlay from "../img/earth.jpg";
 
 class Contact extends React.Component {
+  handleSubmit = event => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const name = (data.get("name") || "").toString().trim();
+    const email = (data.get("email") || "").toString().trim();
+    const subject = (data.get("subject") || "").toString().trim();
+    const message = (data.get("message") || "").toString().trim();
+
+    const body = `${message}\n\n---\nFrom: ${name}\nEmail: ${email}`;
+    const mailto =
+      "mailto:mohamedagoubi98@gmail.com" +
+      "?subject=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(body);
+
+    window.location.href = mailto;
+  };
+
   render() {
     const { language } = this.props;
     const isFrench = language === "fr";
@@ -28,8 +47,7 @@ class Contact extends React.Component {
                       </div>
                       <div>
                         <form
-                          action="https://formspree.io/xdoeonlo"
-                          method="POST"
+                          onSubmit={this.handleSubmit}
                           className="contactForm"
                         >
                           <div id="sendmessage">
