@@ -17,6 +17,7 @@ const projectsEn = [
     summary:
       "Enterprise PWA integrated into iObeya platform for Lean management workflows.",
     stack: "React.js, Node.js, Redis, PWA",
+    url: "https://help.iobeya.com/docs/fr/gemba-walk-assistant",
     lightbox: "portfolio"
   },
   {
@@ -74,6 +75,7 @@ const projectsFr = [
     summary:
       "PWA d'entreprise integree a la plateforme iObeya pour les workflows Lean.",
     stack: "React.js, Node.js, Redis, PWA",
+    url: "https://help.iobeya.com/docs/fr/gemba-walk-assistant",
     lightbox: "portfolio"
   },
   {
@@ -150,10 +152,14 @@ class Portfolio extends React.Component {
               <div className="col-md-4 d-flex" key={project.id}>
                 <div className="work-box">
                   <a
-                    href={GITHUB_URL}
+                    href={project.url || GITHUB_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${project.title} - View on GitHub`}
+                    aria-label={
+                      project.url
+                        ? `${project.title} - View project`
+                        : `${project.title} - View on GitHub`
+                    }
                   >
                     <div className="work-img">
                       <img
